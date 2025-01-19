@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('./SchmalfetteFraktur.woff2') format(woff2);
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'times new roman';
+    background-color: #460000;
+    color: white;
+    text-shadow: white rgba(245, 245, 245, 0.767);
+    max-width: 100%;
+    margin: 0;
+}
+
+header{
+    font-family: 'MyCustomFont';
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+    font-size: 3em;
+}
+h1{ 
+    font-size: 3em;
+    background-color: #460000;
+    text-shadow: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+ }
+
+ p{
+    font-size: 1.5em;
+    margin-top: 20px;
+}   
+
+#gallery {
+    padding-left: 10%;
+    padding-right: 4px;
+    background-color: #460000;
+}
+
+#gallery {
+    width: 100%;
+    margin: 0 auto;
+}
+
+#gallery h2 {
+    margin-right: 10%;
+    margin-bottom: 10%;
+    font-size: 3em;
+}
+.gallery-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.gallery-grid img {
+    width: auto;
+    height: auto;
+    max-width: 70%;
+    max-height: 70%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#contact {
+    padding: 20px;
+    background-color: #460000;
+}
+
+h2{
+    text-align: center;
+    font-size: 2em;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form input, form textarea {
+    width: 80%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #460000;
+    border-radius: 5px;
+}
+
+form button  {
+    padding: 10px 20px;
+    margin-bottom: 5%;
+    background-color: #bac4ca;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer {
+    background-color: black;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    text-size-adjust: 0.7em;
+    font-size: 0.7em;
+}
+
+@media only screen and (max-width: 768px) {
+    .gallery-grid{
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    h1{
+        font-size: 2em;
+    }
+   
+    p{
+        font-size: 1em;
+    }
+}
+@media only screen and (max-width: 480px) {
+    h1 {
+        font-size: 1.5em;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    form input, form textarea {
+        width: 90%;
+    }
+
+    form button {
+        padding: 12px 24px;
+    }
+
+}
